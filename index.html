@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>screen-compare</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <body> 
+   <div class="container">
+    <div class="myForm"> 
+      <form>
+        First:<br>
+        <label for="hw1">Height: width (ratio) (f.e. "20:9"):</label><br>
+        <input type="string" id="hw1" onchange='saveValue(this);'><br><br>
+        <label for="diag1">Diagonal (inches): </label><br>
+        <input type="number" id="diag1" onchange='saveValue(this);'><br><br>
+        <label>Height (mm): </label>
+        <label id="height1mm"></label><br>
+        <label>Width (mm): </label>
+        <label id="width1mm"></label><br>
+        <label>Height (inch): </label>
+        <label id="height1inch"></label><br>
+        <label>Width (inch): </label>
+        <label id="width1inch"></label><br>
+        <label>Area (cm): </label>
+        <label id="area1cm"></label><br>
+        <label>Area (inch): </label>
+        <label id="area1inch"></label><br>
+      </form>
+    </div>
+    <div > 
+      <form>
+        Second:<br>
+        <label for="hw2">Height: Width (ratio) (f.e. "20:9"):</label><br>
+        <input type="string" id="hw2" onchange='saveValue(this);'><br><br>
+        <label for="diag2">Diagonal (inches):</label><br>
+        <input type="number" id="diag2" onchange='saveValue(this);'><br><br>
+        <label>Height (mm): </label>
+        <label id="height2mm"></label><br>
+        <label>Width (mm): </label>
+        <label id="width2mm"></label><br>
+        <label>Height (inch): </label>
+        <label id="height2inch"></label><br>
+        <label>Width (inch): </label>
+        <label id="width2inch"></label><br>
+        <label>Area (cm): </label>
+        <label id="area2cm"></label><br>
+        <label>Area (inch): </label>
+        <label id="area2inch"></label><br>
+      </form>
+    </div>
+    <input type="button" value="Calculate" id="calcBtn" onclick="calc()">
+  </div>
+  <div style = "text-align:center;">
+    <canvas id="myCanvas" ></canvas>
+  </div>
+  <script src="script.js"></script>
+ </body>
+</html>
